@@ -1,0 +1,91 @@
+/* ==========================================================================
+   全体の設定
+   ========================================================================== */
+body {
+    font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', sans-serif;
+    background-color: #fcfaf2; /* 柔らかい生成り色（薄いベージュ） */
+    color: #4a3c31;            /* 深みのあるダークブラウン（文字を読みやすく） */
+    line-height: 1.8;          /* 行間を広げて読みやすく */
+    margin: 0;
+    padding: 40px 20px;
+}
+
+/* ページ全体の幅を制限して中央に寄せる */
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #ffffff; /* コンテンツ部分を白背景にして目立たせる */
+    padding: 30px;
+    border-radius: 12px;       /* 角を丸くする */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); /* ほんのり影をつける */
+}
+
+/* ==========================================================================
+   各要素のデザイン
+   ========================================================================== */
+
+/* メイン見出し（ジャガイモ） */
+h1 {
+    font-size: 2rem;
+    text-align: center;
+    color: #8c6239;            /* ジャガイモをイメージしたブラウン */
+    margin-bottom: 25px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+/* h1の下に可愛いアンダーラインを引く */
+h1::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background-color: #a1d06c; /* 植物の緑 */
+    border-radius: 2px;
+}
+
+/* 画像のスタイル */
+.main-img {
+    width: 100%;               /* 枠線いっぱいに広げる */
+    height: auto;              /* 比率を維持 */
+    border-radius: 8px;        /* 画像の角を少し丸くする */
+    display: block;
+    margin: 0 auto 25px auto;  /* 中央寄せ ＆ 下に余白 */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* 紹介文（最初の段落） */
+.intro {
+    font-size: 1.05rem;
+    margin-bottom: 35px;
+}
+
+/* 小見出し（栽培のポイント） */
+h2 {
+    font-size: 1.4rem;
+    color: #4a3c31;
+    border-left: 5px solid #8c6239; /* 左側に茶色の縦線を引く */
+    padding-left: 10px;
+    margin-bottom: 15px;
+}
+
+/* リスト（箇条書き）のスタイル */
+.point-list {
+    background-color: #f7f9f2; /* 薄いグリーンの背景 */
+    padding: 20px 20px 20px 40px;
+    border-radius: 8px;
+    list-style-type: disc;     /* きれいな黒丸を表示 */
+}
+
+.point-list li {
+    margin-bottom: 12px;       /* 箇条書きの間隔を空ける */
+    font-weight: bold;         /* 文字を少し太くして強調 */
+}
+
+/* 最後のリストだけ下余白をなくす */
+.point-list li:last-child {
+    margin-bottom: 0;
+}
